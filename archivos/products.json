@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "description": "aceite",
+        "price": 2.0,
+        "stock": 882
+    },
+    {
+        "id": 2,
+        "description": "Coca Cola",
+        "price": 1.5,
+        "stock": 998
+    },
+    {
+        "id": 3,
+        "description": "Mortadela",
+        "price": 2.5,
+        "stock": 899
+    },
+    {
+        "id": 4,
+        "description": "tomate",
+        "price": 0.6,
+        "stock": 900
+    },
+    {
+        "id": 5,
+        "description": "deja 1kg",
+        "price": 1.75,
+        "stock": 198
+    }
+]

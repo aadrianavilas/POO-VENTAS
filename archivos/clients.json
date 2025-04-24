@@ -1,0 +1,26 @@
+[
+    {
+        "dni": "0914192144",
+        "name": "Dayanna",
+        "last_name": "Vera",
+        "value": 10000,
+        "type": "vip",
+        "payment_method": "credito"
+    },
+    {
+        "dni": "0958352171",
+        "name": "Adrian",
+        "last_name": "Avila",
+        "value": 19000,
+        "type": "vip",
+        "payment_method": "credito"
+    },
+    {
+        "dni": "0913753158",
+        "name": "Silvia",
+        "last_name": "Sanchez",
+        "value": 10000,
+        "type": "vip",
+        "payment_method": "credito"
+    }
+]
