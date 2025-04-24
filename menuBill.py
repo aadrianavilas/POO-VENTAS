@@ -142,7 +142,7 @@ class CrudClients(ICrud):
 
 
         
-    def delete(self):
+    def delete(self)->None:
         validar = Valida()
         while True:
             print('\033c', end='')
@@ -165,7 +165,7 @@ class CrudClients(ICrud):
             input("presione una tecla para continuar...")  
             
         
-    def consult(self):
+    def consult(self)->None:
         validar=Valida()
         print('\033c', end='')
         gotoxy(2,1);print(green_color+"█"*90)
@@ -237,7 +237,7 @@ class CrudClients(ICrud):
 
 
 class CrudProducts(ICrud):
-    def create(self):
+    def create(self)->None:
         validar=Valida()
         borrarPantalla()
         print('\033c', end='')
@@ -275,7 +275,7 @@ class CrudProducts(ICrud):
 
 
     
-    def update(self):
+    def update(self)->None:
         validar=Valida()
         product_found:List[Any]=[]
         while not product_found:
@@ -343,7 +343,7 @@ class CrudProducts(ICrud):
 
         input(reset_color+'\nPresiona Enter para continuar...')
     
-    def delete(self):
+    def delete(self)->None:
         validar = Valida()
         while True:
             print('\033c', end='')
@@ -365,7 +365,7 @@ class CrudProducts(ICrud):
             input(reset_color+'\nPresione Enter para continuar...')
 
     
-    def consult(self):
+    def consult(self)->None:
         validar=Valida()
         print('\033c', end='')
         gotoxy(2,1);print(green_color+"█"*90)
