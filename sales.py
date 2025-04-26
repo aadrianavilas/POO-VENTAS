@@ -32,9 +32,9 @@ class SaleDetail:
 class Sale(Icalculo):
     next=0
     FACTOR_IVA=0.12
-    def __init__(self,client:object)->None:
+    def __init__(self,id,client:object)->None:
         Sale.next += 1
-        self.__invoice = Sale.next
+        self.__invoice = id
         self.date = date.today()
         self.client = client
         self.subtotal = 0
@@ -48,6 +48,14 @@ class Sale(Icalculo):
     def invoice(self)->int:
         # Getter para obtener el valor del límite de crédito del cliente VIP
         return self.__invoice
+    @property
+    def dni(self)->int:
+        # Getter para obtener el valor del límite de crédito del cliente VIP
+        return self.client.dni
+    @property
+    def payment_method(self)->int:
+        # Getter para obtener el valor del límite de crédito del cliente VIP
+        return self.client.payment_method
     
     def __repr__(self)->str:
         # Método especial para representar la clase Cliente como una cadena

@@ -73,11 +73,11 @@
         "date": "2025-04-22",
         "dni": "0958352171",
         "client": "Adrian Avila",
-        "payment_method": "tarjeta",
+        "payment_method": "credito",
         "subtotal": 4.0,
-        "discount": 0.4,
+        "discount": 0.0,
         "iva": 0.43,
-        "total": 4.03,
+        "total": 4.43,
         "details": [
             {
                 "product": "aceite",
