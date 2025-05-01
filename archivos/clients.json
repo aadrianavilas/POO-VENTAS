@@ -19,8 +19,8 @@
         "dni": "0913753158",
         "name": "Silvia",
         "last_name": "Sanchez",
-        "value": 10000,
-        "type": "vip",
-        "payment_method": "credito"
+        "value": 0,
+        "type": "regular",
+        "payment_method": "efectivo"
     }
 ]
