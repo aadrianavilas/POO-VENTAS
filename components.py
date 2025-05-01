@@ -1,6 +1,7 @@
 from utilities import borrarPantalla, gotoxy
 import time
 from typing import List,Any,Dict
+from datetime import datetime
 
 class Menu:
     def __init__(self,titulo:str="",opciones:List[str]=[],col:int=6,fil:int=1)->None:
@@ -22,7 +23,7 @@ class Menu:
 
 
 class Valida:
-    def solo_numeros(self,mensajeError:str,col:int,fil:int)->str:
+    def solo_numeros(self,mensajeError:str,col:int,fil:int,cant:int=23)->str:
         while True: 
             gotoxy(col,fil)            
             valor = input()
@@ -32,7 +33,7 @@ class Valida:
             except:
                 gotoxy(col,fil);print(mensajeError)
                 time.sleep(1)
-                gotoxy(col,fil);print(" "*23)
+                gotoxy(col,fil);print(" "*cant)
         return valor
 
     def solo_letras(self,mensaje:str,mensajeError:str,col:int,fil:int)->str: 
@@ -69,7 +70,7 @@ class Valida:
             return False
 
         digits:List[int]=[2,1,2,1,2,1,2,1,2]
-        ced:List[int]=[int(d) for d in cedula[:-1]]
+        ced:List[int]=[int(d) for d in cedula[:10]]
         total:int=0
         for d in range(9):
             var=ced[d]*digits[d]
@@ -78,10 +79,19 @@ class Valida:
             total+=var
 
         verificator= 0 if total % 10 == 0 else 10 - (total % 10)
-        return verificator==int(cedula[-1])
+        return verificator==int(cedula[9])
 
         
-            
+    def date(self,col:int,fil:int):
+        while True:
+            try:
+                gotoxy(col,fil);date=input()
+                datetime.strptime(date, "%d-%m-%Y")
+                return date
+            except:
+                gotoxy(col,fil);print("Error: formato fecha inválido")
+                time.sleep(1)
+                gotoxy(col,fil);print(" "*30)
             
 
 
@@ -109,4 +119,4 @@ if __name__ == '__main__':
     # decimal_validado = valida.solo_decimales("Ingrese un decimal:", "Mensaje de error")
     # print("Decimal validado:", decimal_validado)
 
-    print(valida.cedula('0913753158'))
+    print(valida.cedula('0913753158001'))

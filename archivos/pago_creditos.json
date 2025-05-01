@@ -1,0 +1,64 @@
+[
+    {
+        "id": 1,
+        "id_invoice": 2,
+        "date": "2025-04-25",
+        "dni": "0914192144",
+        "client": "Dayanna Vera",
+        "payment_method": "credito",
+        "subtotal": 16.5,
+        "discount": 0.0,
+        "iva": 1.98,
+        "total": 18.48,
+        "saldo": 0.0,
+        "state": "Pagado",
+        "details_pays": [
+            {
+                "id": 1,
+                "date_pay": "30-05-2025",
+                "value": 13.48
+            },
+            {
+                "id": 2,
+                "date_pay": "23-05-2025",
+                "value": 5.0
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "id_invoice": 10,
+        "date": "2025-04-25",
+        "dni": "0958352171",
+        "client": "Adrian Avila",
+        "payment_method": "credito",
+        "subtotal": 4.0,
+        "discount": 0.0,
+        "iva": 0.48,
+        "total": 4.48,
+        "saldo": 0.0,
+        "state": "Pagado",
+        "details_pays": [
+            {
+                "id": 1,
+                "date_pay": "25-04-2025",
+                "value": 3.0
+            },
+            {
+                "id": 2,
+                "date_pay": "25-05-2025",
+                "value": 0.5
+            },
+            {
+                "id": 3,
+                "date_pay": "25-05-2025",
+                "value": 0.48
+            },
+            {
+                "id": 4,
+                "date_pay": "26-06-2025",
+                "value": 0.5
+            }
+        ]
+    }
+]
