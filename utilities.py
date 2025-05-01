@@ -32,4 +32,3 @@ def show_tabulate(data,headers):
     print(tabulate(data,headers=headers,tablefmt='pretty'))
 
 path, _ = os.path.split(os.path.abspath(__file__))
-print("ruta: ",path)

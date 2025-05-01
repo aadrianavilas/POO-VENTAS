@@ -121,5 +121,33 @@
                 "quantity": 10
             }
         ]
+    },
+    {
+        "invoice": 12,
+        "date": "2025-05-01",
+        "dni": "0913753158",
+        "client": "Silvia Sanchez",
+        "payment_method": "credito",
+        "subtotal": 31.25,
+        "discount": 0.0,
+        "iva": 3.75,
+        "total": 35.0,
+        "details": [
+            {
+                "product": "coca cola",
+                "price": 1.5,
+                "quantity": 10
+            },
+            {
+                "product": "Mortadela",
+                "price": 2.5,
+                "quantity": 3
+            },
+            {
+                "product": "deja 1kg",
+                "price": 1.75,
+                "quantity": 5
+            }
+        ]
     }
 ]

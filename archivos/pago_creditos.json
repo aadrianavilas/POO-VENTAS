@@ -81,5 +81,31 @@
                 "value": 10.0
             }
         ]
+    },
+    {
+        "id": 4,
+        "id_invoice": 12,
+        "date": "2025-05-01",
+        "dni": "0913753158",
+        "client": "Silvia Sanchez",
+        "payment_method": "credito",
+        "subtotal": 31.25,
+        "discount": 0.0,
+        "iva": 3.75,
+        "total": 35.0,
+        "saldo": 0.0,
+        "state": "Pagado",
+        "details_pays": [
+            {
+                "id": 1,
+                "date_pay": "02-05-2025",
+                "value": 11.25
+            },
+            {
+                "id": 2,
+                "date_pay": "06-06-2025",
+                "value": 23.75
+            }
+        ]
     }
 ]

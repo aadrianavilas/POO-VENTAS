@@ -9,13 +9,13 @@
         "id": 2,
         "description": "coca cola",
         "price": 1.5,
-        "stock": 788
+        "stock": 768
     },
     {
         "id": 3,
         "description": "Mortadela",
         "price": 2.5,
-        "stock": 899
+        "stock": 894
     },
     {
         "id": 4,
@@ -27,6 +27,18 @@
         "id": 5,
         "description": "deja 1kg",
         "price": 1.75,
-        "stock": 198
+        "stock": 190
+    },
+    {
+        "id": 6,
+        "description": "galletas ducales",
+        "price": 1.26,
+        "stock": 200
+    },
+    {
+        "id": 7,
+        "description": "aceite 1lt",
+        "price": 1.0,
+        "stock": 197
     }
 ]

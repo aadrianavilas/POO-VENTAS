@@ -1,4 +1,4 @@
-from calculos import Icalculo
+from models.calculos import Icalculo
 from datetime import date
 import os
 from typing import Dict,Any
@@ -22,11 +22,9 @@ class SaleDetail:
     
     @property
     def id(self)->int:
-        # Getter para obtener el valor del límite de crédito del cliente VIP
         return self.__id
     
     def __repr__(self)->str:
-        # Método especial para representar la clase Cliente como una cadena
         return f'{self.id} {self.product.descrip} {self.preci} {self.quantity}'  
         
 class Sale(Icalculo):
@@ -46,19 +44,17 @@ class Sale(Icalculo):
     
     @property
     def invoice(self)->int:
-        # Getter para obtener el valor del límite de crédito del cliente VIP
         return self.__invoice
+    
     @property
     def dni(self)->int:
-        # Getter para obtener el valor del límite de crédito del cliente VIP
         return self.client.dni
+    
     @property
     def payment_method(self)->int:
-        # Getter para obtener el valor del límite de crédito del cliente VIP
         return self.client.payment_method
     
     def __repr__(self)->str:
-        # Método especial para representar la clase Cliente como una cadena
         return f'Factura# {self.invoice} {self.date} {self.client.fullName()} {self.total}'  
     
     def cal_iva(self,iva:float=0.12,valor:float=0)->float:
@@ -68,12 +64,9 @@ class Sale(Icalculo):
         return valor*discount
     
     def add_detail(self,prod:object,qty:int)->None:
-        # composicion entre detventa y venta
         detail = SaleDetail(prod,qty)
         self.subtotal += round(detail.preci*detail.quantity,2)
-        # self.discount = self.subtotal*self.percentage_discount
         self.discount = self.cal_discount(self.subtotal,self.percentage_discount)     
-        # self.iva = round((self.subtotal-self.discount)*Sale.FACTOR_IVA,2)
         self.iva = self.cal_iva(Sale.FACTOR_IVA,self.subtotal-self.discount)
         self.total = round(self.subtotal+self.iva-self.discount,2)
         self.sale_detail.append(detail)  
@@ -98,7 +91,6 @@ class Sale(Icalculo):
         
 
     def getJson(self)->Dict[str,Any]:
-        # Método especial para representar la clase venta como diccionario
         invoice= {"invoice":self.invoice,"date":self.date.strftime("%Y-%m-%d"),"dni":self.client.dni
         ,"client":self.client.fullName(),"payment_method":self.client.payment_method,"subtotal":self.subtotal,"discount": self.discount,"iva": self.iva,"total": self.total,"details":[]}
         for det in self.sale_detail:
@@ -108,5 +100,4 @@ class Sale(Icalculo):
                 "quantity": det.quantity}
             )  
         return invoice
-# cli = Client()       
-# sale1 = Sale()      
+
