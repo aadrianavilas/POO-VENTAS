@@ -60,5 +60,26 @@
                 "value": 0.5
             }
         ]
+    },
+    {
+        "id": 3,
+        "id_invoice": 11,
+        "date": "2025-04-30",
+        "dni": "0958352171",
+        "client": "Adrian Avila",
+        "payment_method": "credito",
+        "subtotal": 15.0,
+        "discount": 0.0,
+        "iva": 1.8,
+        "total": 16.8,
+        "saldo": 6.8,
+        "state": "Parcial",
+        "details_pays": [
+            {
+                "id": 1,
+                "date_pay": "30-04-2025",
+                "value": 10.0
+            }
+        ]
     }
 ]
