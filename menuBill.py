@@ -967,7 +967,7 @@ class CrudCredito(ICrud):
 
                 
 
-    def delete(self):
+    def delete(self)->None:
         validar = Valida()
         while True:
             print('\033c', end='')
@@ -987,8 +987,9 @@ class CrudCredito(ICrud):
             print(green_color+"😊 Venta eliminada correctamente 😊"+reset_color)
             break
 
-        input("presione una tecla para continuar...") 
-    def consult(self):
+        input("presione una tecla para continuar...")
+
+    def consult(self)->None:
         print('\033c', end='')
         gotoxy(2,1);print(green_color+"█"*90)
         gotoxy(2,2);print("██"+" "*34+"Consulta de Pago a Crédito"+" "*35+"██")
